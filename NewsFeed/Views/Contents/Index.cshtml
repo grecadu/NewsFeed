@@ -1,0 +1,30 @@
+﻿@model IEnumerable<MyFeeds.Models.Content>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>News </h2>
+
+
+
+@foreach (var item in Model)
+{
+    <div class="post-content">
+        <img src="~/images/news/@Html.DisplayFor(modelItem => item.ImageName)" alt="post-image" class="img-responsive post-image">
+        <div class="post-container">
+            <img src="~/images/@Html.DisplayFor(modelItem => item.Source.ImageName)" alt="user" class="profile-photo-md pull-left">
+            <div class="post-detail">
+                <div class="user-info">
+                    <h5><a href="timeline.html" class="profile-link">@Html.DisplayFor(modelItem => item.Source.Origin)</a></h5>
+                    <p class="text-muted">@Html.DisplayFor(modelItem => item.Date)</p>
+                </div>
+                <div class="line-divider"></div>
+                <div class="post-text">
+                    <p>@Html.DisplayFor(modelItem => item.Display) <i class="em em-anguished"></i> <i class="em em-anguished"></i> <i class="em em-anguished"></i></p>
+                </div>
+                <div class="line-divider"></div>
+            </div>
+        </div>
+    </div>
+}

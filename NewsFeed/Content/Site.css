@@ -1,0 +1,111 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+
+.nearby-user {
+    padding: 20px 0;
+    border-top: 1px solid #f1f2f2;
+    border-bottom: 1px solid #f1f2f2;
+    margin-bottom: 20px;
+}
+
+.profile-link {
+    font-weight: 600;
+}
+
+.text-muted {
+    color: #939598;
+}
+
+img.profile-photo-lg {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+
+.post-content {
+    background: #f8f8f8;
+    border-radius: 4px;
+    width: 100%;
+    border: 1px solid #f1f2f2;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+    .post-content img.post-image, video.post-video, .google-maps {
+        width: 100%;
+        height: auto;
+    }
+
+    .post-content .google-maps .map {
+        height: 300px;
+    }
+
+    .post-content .post-container {
+        padding: 20px;
+    }
+
+        .post-content .post-container .post-detail {
+            margin-left: 65px;
+            position: relative;
+        }
+
+            .post-content .post-container .post-detail .post-text {
+                line-height: 24px;
+                margin: 0;
+            }
+
+            .post-content .post-container .post-detail .reaction {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .post-content .post-container .post-detail .post-comment {
+                display: inline-flex;
+                margin: 10px auto;
+                width: 100%;
+            }
+
+                .post-content .post-container .post-detail .post-comment img.profile-photo-sm {
+                    margin-right: 10px;
+                }
+
+                .post-content .post-container .post-detail .post-comment .form-control {
+                    height: 30px;
+                    border: 1px solid #ccc;
+                    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                    margin: 7px 0;
+                    min-width: 0;
+                }
+
+img.profile-photo-md{
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+}

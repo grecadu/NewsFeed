@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MyFeeds.Models.Source>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>News Feed</h2>
+
+@using (Html.BeginForm("Search", "Sources"))
+{
+    <p>
+        Title: @Html.TextBox("SearchString") 
+        <input type="submit" value="Filter" />
+    </p>
+}
+
+@foreach (var item in Model)
+{
+    <div class="nearby-user">
+        <div class="row">
+            <div class="col-md-2 col-sm-2">
+                <img src="~/Images/@Html.DisplayFor(modelItem => item.ImageName)" class="profile-photo-lg">
+            </div>
+            <div class="col-md-7 col-sm-7">
+                <h5>
+                    <a class="profile-link">@Html.DisplayFor(modelItem => item.Origin)</a>
+                </h5>
+                <p>@Html.DisplayFor(modelItem => item.Description) </p>
+                <p class="text-muted">@Html.DisplayFor(modelItem => item.Address)</p>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                @Html.ActionLink(
+                "Suscribe",
+                "Suscribe",
+                "UserFeeds",
+                new { item.Id },
+                new { @class = "btn btn-primary pull-right" })
+
+            </div>
+        </div>
+    </div>
+}
+

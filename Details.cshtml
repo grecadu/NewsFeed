@@ -1,0 +1,42 @@
+﻿@model MyFeeds.Models.Feed
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Feed</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Content.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Content.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContentType.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContentType.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Source.Origin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Source.Origin)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
